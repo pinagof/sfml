@@ -38,3 +38,25 @@ nohup bash -c 'while :; do
   echo [$(date)] Process exited!
   sleep 5
 done' >/home/vscode/.vnc-loop.log 2>&1 &
+
+
+
+echo "🔧 Instalando dependencias del sistema..."
+sudo apt-get update -y
+sudo apt-get install -y \
+    libsfml-dev \
+    cmake \
+    build-essential \
+    ninja-build \
+    gdb \
+    xvfb \
+    x11-utils \
+    libx11-dev \
+    libxrandr-dev \
+    libxcursor-dev \
+    libudev-dev \
+    libgl1-mesa-dev \
+    libfreetype-dev \
+    libopenal-dev \
+    libflac-dev \
+    libvorbis-dev

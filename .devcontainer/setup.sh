@@ -2,12 +2,11 @@
 set -e
 
 pkill -f "tigervncserver :1" || true
-pkill -f "Xtigervnc :1" || true
+#pkill -f "Xtigervnc :1" || true
 
 echo "🔧 Instalando dependencias del sistema..."
 sudo apt-get update -y
 sudo apt-get install -y \
-    libsfml-dev \
     cmake \
     build-essential \
     ninja-build \
@@ -24,16 +23,8 @@ sudo apt-get install -y \
     libflac-dev \
     libvorbis-dev
 
-echo "✅ SFML y dependencias instaladas correctamente."
-dpkg -s libsfml-dev | grep Version || true
 
-# Eliminar SFML 2 si estaba instalado
-sudo apt-get remove -y libsfml-dev
-
-# Dependencias para compilar SFML 3
-sudo apt-get install -y git cmake libfreetype-dev libopenal-dev \
-    libflac-dev libvorbis-dev libgl1-mesa-dev libxrandr-dev \
-    libxcursor-dev libudev-dev
+# Dependencias para compilar SFML 3 instaladas
 
 # Clonar y compilar SFML 3
 git clone --depth 1 --branch 3.0.0 https://github.com/SFML/SFML.git /tmp/SFML
