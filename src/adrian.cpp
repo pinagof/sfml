@@ -24,3 +24,4 @@
     {
         sprite.move(direccion * velocidad * dt);
     }
+    void Adrian::dibujar
