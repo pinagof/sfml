@@ -31,7 +31,4 @@ echo "🏗️  Configurando el proyecto CMake..."
 mkdir -p build
 cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug
 echo "✅ Entorno listo. Usa 'cmake --build build' para compilar."
-echo "Vamos a pasar Xtigervnc a depth 24"
-bash .devcontainer/setup-corrige.sh
-#pkill -f "Xtigervnc :1" && tigervncserver :1 -geometry 1440x768 -depth 24 -rfbport 5901 -dpi 96 -localhost -Securitytypes None
-# final
+# existe un programa .sh (setup-corrige.sh) para indicar como se puede recargar el tigervncserver

@@ -2,10 +2,6 @@
     "name": "C++ SFML Development",
     "image": "mcr.microsoft.com/devcontainers/cpp:1-ubuntu-24.04",
     "features": {
-        "ghcr.io/devcontainers/features/common-utils:2": {
-            "installZsh": true,
-            "configureZshAsDefaultShell": true
-        },
         "ghcr.io/devcontainers/features/desktop-lite:1": {
             "version": "latest",
             "noVncVersion": "1.4.0",
@@ -13,6 +9,10 @@
             "webPort": "6080",
             "vncPort": "5901",
             "depth": "24"
+        },
+            "ghcr.io/devcontainers/features/common-utils:2": {
+            "installZsh": true,
+            "configureZshAsDefaultShell": true
         }
     },
     "postCreateCommand": "bash .devcontainer/setup.sh",
